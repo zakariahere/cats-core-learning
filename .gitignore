@@ -1,0 +1,25 @@
+# sbt build output (at any depth)
+target/
+project/project/
+
+# Local editor/build-server state
+.idea/
+*.iml
+.bsp/
+.bloop/
+.metals/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local article drafts, publishing receipts, and learning-session notes
+/outputs/
+/progress.md
+
+# Local credentials
+.env
+.env.*
+!.env.example
+.publish-token
