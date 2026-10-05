@@ -141,9 +141,10 @@ versions have to match.
 
 ## Keep learning
 
-The lab grows alongside the [Cats Core series](https://blog.zakaria.lu/topics/cats-core).
-The first article, [From Optional Fields to Useful Validation Errors](https://blog.zakaria.lu/cats-core-part-1-from-optional-fields-to-useful-validation-errors),
-follows lessons 04–05. Lessons 06–07 continue from that error-accumulation example.
+The lab grows alongside the [Cats Core series](https://blog.zakaria.lu/topics/cats-core):
+
+- [Part 1: From Optional Fields to Useful Validation Errors](https://blog.zakaria.lu/cats-core-part-1-from-optional-fields-to-useful-validation-errors) follows lessons 04–05.
+- [Part 2: Teaching Cats How to Combine Our Validation Errors](https://blog.zakaria.lu/cats-core-part-2-teaching-cats-how-to-combine-our-validation-errors) follows lessons 06–07.
 
 Useful references: [Typelevel Cats](https://typelevel.org/cats/),
 [`Validated`](https://typelevel.org/cats/datatypes/validated.html), and
