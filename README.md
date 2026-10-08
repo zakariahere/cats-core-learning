@@ -78,7 +78,7 @@ error type. Type `:quit` to leave the console.
 
 ## The lessons
 
-Seven lessons are available. Read a note, run its program, inspect the values,
+Eleven lessons are available. Read a note, run its program, inspect the values,
 and make a small change before moving on.
 
 | Lesson | Concrete question | Run | Source |
@@ -90,6 +90,10 @@ and make a small change before moving on.
 | [05 · `Validated`](lessons/05-validated.md) | How do we keep both field errors? | `sbt lesson05` | [Scala](src/main/scala/learning/lesson05/ValidatedLesson.scala) |
 | [06 · `Semigroup`](lessons/06-semigroup.md) | Which operation combines those errors? | `sbt lesson06` | [Scala](src/main/scala/learning/lesson06/SemigroupLesson.scala) |
 | [07 · A custom error `Semigroup`](lessons/07-custom-error-semigroup.md) | How do we retain field names and define our own combination rule? | `sbt lesson07` | [Scala](src/main/scala/learning/lesson07/CustomErrorSemigroupLesson.scala) |
+| [08 · `Monoid` and `combineAll`](lessons/08-monoid.md) | How do we combine a batch of reports, including an empty batch? | `sbt lesson08` | [Scala](src/main/scala/learning/lesson08/MonoidLesson.scala) |
+| [09 · `foldMap`](lessons/09-foldmap.md) | How do we turn cart lines into one checkout total? | `sbt lesson09` | [Scala](src/main/scala/learning/lesson09/FoldMapLesson.scala) |
+| [10 · `Foldable`](lessons/10-foldable.md) | How can one checkout summary function accept List and Vector? | `sbt lesson10` | [Scala](src/main/scala/learning/lesson10/FoldableLesson.scala) |
+| [11 · `Functor`](lessons/11-functor.md) | How can one discount function transform prices in List and Option? | `sbt lesson11` | [Scala](src/main/scala/learning/lesson11/FunctorLesson.scala) |
 
 Each lesson has its own package, so you can experiment with one example without
 having to rewrite all the later lessons. The policy rules are illustrative:
@@ -101,14 +105,14 @@ All examples contain assertions and print a success message when their checks
 pass. Run the full sequence in one sbt session:
 
 ```shell
-sbt lesson01 lesson02 lesson03 lesson04 lesson05 lesson06 lesson07
+sbt lesson01 lesson02 lesson03 lesson04 lesson05 lesson06 lesson07 lesson08 lesson09 lesson10 lesson11
 ```
 
 These checks are in the runnable programs. `sbt test` does not run them.
 
 | Command | Purpose |
 | --- | --- |
-| `sbt compile` | Compile all seven examples |
+| `sbt compile` | Compile all eleven examples |
 | `sbt lesson07` | Run one lesson and its assertions |
 | `sbt console` | Experiment with the compiled code interactively |
 | `sbt run` | Run the configured starting example, lesson 01 |
