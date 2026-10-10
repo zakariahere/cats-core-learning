@@ -39,4 +39,5 @@ Be Zakaria's friendly learning buddy. Natural emojis are welcome.
 ## README
 
 When creating or substantially redesigning a README, put Zakaria's canonical
-mascot at the beginning. Use the zakaria-mascot skill and approved reference assets.
+mascot at the beginning, reusing the existing approved assets in `docs/assets/`.
+Never use the zakaria-mascot skill or generate new mascot images.

@@ -78,7 +78,7 @@ error type. Type `:quit` to leave the console.
 
 ## The lessons
 
-Eleven lessons are available. Read a note, run its program, inspect the values,
+Thirteen lessons are available. Read a note, run its program, inspect the values,
 and make a small change before moving on.
 
 | Lesson | Concrete question | Run | Source |
@@ -94,9 +94,12 @@ and make a small change before moving on.
 | [09 · `foldMap`](lessons/09-foldmap.md) | How do we turn cart lines into one checkout total? | `sbt lesson09` | [Scala](src/main/scala/learning/lesson09/FoldMapLesson.scala) |
 | [10 · `Foldable`](lessons/10-foldable.md) | How can one checkout summary function accept List and Vector? | `sbt lesson10` | [Scala](src/main/scala/learning/lesson10/FoldableLesson.scala) |
 | [11 · `Functor`](lessons/11-functor.md) | How can one discount function transform prices in List and Option? | `sbt lesson11` | [Scala](src/main/scala/learning/lesson11/FunctorLesson.scala) |
+| [12 · A custom `Functor`](lessons/12-custom-functor.md) | How can our own Quote reuse that discount function while retaining its source? | `sbt lesson12` | [Scala](src/main/scala/learning/lesson12/CustomFunctorLesson.scala) |
+| [13 · `Apply`](lessons/13-apply.md) | How do we combine a price and delivery cost inside Option or List? | `sbt lesson13` | [Scala](src/main/scala/learning/lesson13/ApplyLesson.scala) |
 
 Each lesson has its own package, so you can experiment with one example without
-having to rewrite all the later lessons. The policy rules are illustrative:
+having to rewrite all the later lessons. Lesson 12 explicitly reuses the generic
+discount function from lesson 11. The policy rules are illustrative:
 a nonblank number and a positive annual premium.
 
 ## Run the checks
@@ -105,14 +108,14 @@ All examples contain assertions and print a success message when their checks
 pass. Run the full sequence in one sbt session:
 
 ```shell
-sbt lesson01 lesson02 lesson03 lesson04 lesson05 lesson06 lesson07 lesson08 lesson09 lesson10 lesson11
+sbt lesson01 lesson02 lesson03 lesson04 lesson05 lesson06 lesson07 lesson08 lesson09 lesson10 lesson11 lesson12 lesson13
 ```
 
 These checks are in the runnable programs. `sbt test` does not run them.
 
 | Command | Purpose |
 | --- | --- |
-| `sbt compile` | Compile all eleven examples |
+| `sbt compile` | Compile all thirteen examples |
 | `sbt lesson07` | Run one lesson and its assertions |
 | `sbt console` | Experiment with the compiled code interactively |
 | `sbt run` | Run the configured starting example, lesson 01 |
@@ -149,6 +152,7 @@ The lab grows alongside the [Cats Core series](https://blog.zakaria.lu/topics/ca
 
 - [Part 1: From Optional Fields to Useful Validation Errors](https://blog.zakaria.lu/cats-core-part-1-from-optional-fields-to-useful-validation-errors) follows lessons 04–05.
 - [Part 2: Teaching Cats How to Combine Our Validation Errors](https://blog.zakaria.lu/cats-core-part-2-teaching-cats-how-to-combine-our-validation-errors) follows lessons 06–07.
+- [Part 3: From Empty Batches to Checkout Totals](https://blog.zakaria.lu/cats-core-part-3-from-empty-batches-to-checkout-totals) follows lessons 08–09.
 
 Useful references: [Typelevel Cats](https://typelevel.org/cats/),
 [`Validated`](https://typelevel.org/cats/datatypes/validated.html), and
