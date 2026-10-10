@@ -1,5 +1,17 @@
 # Lesson 13 - Combine independent inputs with Apply
 
+```text
+Functor only (map inside map)          Apply (map2 / mapN)
+
+Some[12] ─┐                            Some[12] ─┐
+          ├─ p + d ─► Some[ Some[15] ]           ├─ p + d ─► Some[15]
+Some[3]  ─┘           box in a box     Some[3]  ─┘           one box
+
+map2(fa, fb)(f) = map(product(fa, fb))(f.tupled)
+                      └ Semigroupal ┘  └ Functor ┘
+product(Some(12), Some(3)) = Some((12, 3))  ->  map  ->  Some(15)
+```
+
 Lesson 11 mapped one contextual value, and lesson 12 supplied a Functor for
 our own Quote. Now a checkout needs two inputs: a price and a delivery cost.
 Both are already available as optional values, and we need both to calculate
